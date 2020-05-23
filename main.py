@@ -5,4 +5,4 @@ import bot
 # @nombre de usuario de nuestro bot
 
 def main():
-    #argumentos 
+    #argumentos de la fución
