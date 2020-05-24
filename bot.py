@@ -1,5 +1,5 @@
 import functions as f
-import pylab as pylab
+import matplotlib.pyplot as plt 
 import os
 import os.path
 from os import path
@@ -30,7 +30,7 @@ def help(update, context):
 def allStars(update, context):
     chat_id = update.message.chat.id
     figure = f.stars()
-    pylab.savefig("./files/stars.png")
+    plt.savefig("./files/stars.png")
     context.bot.send_photo(chat_id, open("./files/stars.png",'rb'))
     os.remove("./files/stars.png")
 

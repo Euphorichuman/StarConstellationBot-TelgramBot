@@ -1,7 +1,4 @@
-import pylab as pylab
-import os
-import os.path
-from os import path
+import matplotlib.pyplot as plt
 
 #Función para graficar todas las estrellas
 def stars():
@@ -26,8 +23,8 @@ def stars():
     starsfile.close()
 
     scale = 1
-    figureMap = pylab.figure(figsize=(15, 15))
-    axis = pylab.subplot(facecolor=("#000000"))
-    pylab.scatter(x,y, scale, facecolor=("#feffd8"))
-    return[pylab.draw()] 
+    figureMap = plt.figure(figsize=(15, 15))
+    axis = plt.subplot(facecolor=("#000000"))
+    plt.scatter(x,y, scale, facecolor=("#feffd8"))
+    return[plt.draw()] 
 
