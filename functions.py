@@ -35,39 +35,40 @@ def allStarsAllConstellations():
     y = []
     nameslist = []
     for line in starsfile:
-    fields = line.split(" ")
-    x.insert(cont, float(fields[0]))
-    y.insert(cont, float(fields[1]))
-    if len(fields) == 7:
-        names = fields[6]
-        names = names.split(";")
-        names = [name.strip() for name in names]
-        nameslist.insert(cont, names)
-        cont += 1
-    if len(fields) == 8:
-        names = fields[6]+" "+fields[7]
-        names = names.split(";")
-        names = [name.strip() for name in names]
-        nameslist.insert(cont, names)
-        cont += 1 
-    if len(fields) == 9:
-        st = ""
-        st = fields[6]
-        end = len(st)
-        names = st[0:end]+fields[7]+" "+fields[8]
-        names = names.split(";")
-        names = [name.strip() for name in names]
-        nameslist.insert(cont, names)
-        cont += 1
-    if len(fields) == 10:
-        st = ""
-        st = fields[7]
-        end = len(st)
-        names = fields[6]+" "+st[0:end]+fields[8]+" "+fields[9]
-        names = names.split(";")
-        names = [name.strip() for name in names]
-        nameslist.insert(cont, names)
-        cont += 1 
+        fields = line.split(" ")
+        x.insert(cont, float(fields[0]))
+        y.insert(cont, float(fields[1]))
+        if len(fields) == 7:
+            names = fields[6]
+            names = names.split(";")
+            names = [name.strip() for name in names]
+            nameslist.insert(cont, names)
+            cont += 1
+        if len(fields) == 8:
+            names = fields[6]+" "+fields[7]
+            names = names.split(";")
+            names = [name.strip() for name in names]
+            nameslist.insert(cont, names)
+            cont += 1 
+        if len(fields) == 9:
+            st = ""
+            st = fields[6]
+            end = len(st)
+            names = st[0:end]+fields[7]+" "+fields[8]
+            names = names.split(";")
+            names = [name.strip() for name in names]
+            nameslist.insert(cont, names)
+            cont += 1
+        if len(fields) == 10:
+            st = ""
+            st = fields[7]
+            end = len(st)
+            names = fields[6]+" "+st[0:end]+fields[8]+" "+fields[9]
+            names = names.split(";")
+            names = [name.strip() for name in names]
+            nameslist.insert(cont, names)
+            cont += 1 
+    
     starsfile.close()
 
     BoyeroFile = open("./files/constellations/Boyero.txt","r")
@@ -84,22 +85,22 @@ def allStarsAllConstellations():
     xy2 = ""
 
     for line in HydraFile:
-    field = line.split(",")
-    for line2 in nameslist:
-      if len(line2) == 1:
-        if field[0] == line2[0]:
-          xy1 = str(x[cont])+","+str(y[cont])
-        if field[1].strip("\n") == line2[0]:
-          xy2 = str(x[cont])+","+str(y[cont])
+        field = line.split(",")
+        for line2 in nameslist:
+            if len(line2) == 1:
+                if field[0] == line2[0]:
+                    xy1 = str(x[cont])+","+str(y[cont])
+                if field[1].strip("\n") == line2[0]:
+                    xy2 = str(x[cont])+","+str(y[cont])
 
-      elif len(line2) == 2:
-        if field[0] == line2[0] or field[0] == line2[1]:
-          xy1 = str(x[cont])+","+str(y[cont])
-        if field[1].strip("\n") == line2[0] or field[1] == line2[1]:
-          xy2 = str(x[cont])+","+str(y[cont])
+            elif len(line2) == 2:
+                if field[0] == line2[0] or field[0] == line2[1]:
+                    xy1 = str(x[cont])+","+str(y[cont])
+                if field[1].strip("\n") == line2[0] or field[1] == line2[1]:
+                    xy2 = str(x[cont])+","+str(y[cont])
     
-    cont += 1
-    XY.insert(cont, xy1+";"+xy2)
+        cont += 1
+        XY.insert(cont, xy1+";"+xy2)
 
     scale = 1
     figureMap = plt.figure(figsize=(15, 15))
