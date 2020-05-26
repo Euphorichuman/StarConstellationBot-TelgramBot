@@ -51,7 +51,6 @@ def allStars1Constellation(update, context):
 
 #Función para mandar la figura con todas las estrellas y todas las constelaciones
 def allStarsAllConstellations(update, context):
-    update.message.reply_text("Mostrar un gráfico de todas las estrellas y todas las constelaciones.")
     chat_id = update.message.chat.id
     figure = f.stars()
     plt.savefig("./files/AllStarsAllConst.png")
