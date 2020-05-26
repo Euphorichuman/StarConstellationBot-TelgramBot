@@ -51,11 +51,12 @@ def allStars1Constellation(update, context):
 
 #Función para mandar la figura con todas las estrellas y todas las constelaciones
 def allStarsAllConstellations(update, context):
+    update.message.reply_text("Mostrar un gráfico de todas las estrellas y todas las constelaciones.")
     chat_id = update.message.chat.id
-    figure = f.starsAndContellations()
-    plt.savefig("./files/starsAndContellations.png")
-    context.bot.send_photo(chat_id, open("./files/starsAndContellations.png",'rb'))
-    os.remove("./files/starsAndContellations.png")
+    figure = f.stars()
+    plt.savefig("./files/AllStarsAllConst.png")
+    context.bot.send_photo(chat_id, open("./files/AllStarsAllConst.png",'rb'))
+    os.remove("./files/AllStarsAllConst.png")
 
 constellationsMessage = """Las constelaciones disponibles son:
 -BOYERO
