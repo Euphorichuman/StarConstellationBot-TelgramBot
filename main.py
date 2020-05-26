@@ -1,7 +1,7 @@
 from config import TOKEN
 from telegram.ext import Updater, CommandHandler, InlineQueryHandler
 #from telegram import 
-from bot import start, help, allStars, allStars1Constellation, allStarsAllConstellations
+from bot import start, help, allStars, allStars1Constellation, allStarsAllConstellations, constellations
 # @startconstellationbot
 
 def main():
@@ -14,6 +14,7 @@ def main():
     dispatcher.add_handler(CommandHandler("AllStars", allStars))
     dispatcher.add_handler(CommandHandler("AllStars1Constellation", allStars1Constellation))
     dispatcher.add_handler(CommandHandler("AllStarsAllConstellations", allStarsAllConstellations))
+    dispatcher.add_handler(CommandHandler("Contellations", constellations))
 
 
     #Ejecuta el bot
