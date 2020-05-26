@@ -79,12 +79,32 @@ def allStarsAllConstellations():
     HydraFile = open("./files/constellations/Hydra.txt","r")
     OsaMFile = open("./files/constellations/OsaMayor.txt","r")
     OsamFile = open("./files/constellations/OsaMenor.txt","r")
+
+    constellation(BoyeroFile)
+    constellation(CasiopeaFile)
+    constellation(CazoFile)
+    constellation(CygnetFile)
+    constellation(GeminisFile)
+    constellation(HydraFile)
+    constellation(OsaMFile)
+    constellation(OsamFile)
+
+    BoyeroFile.close()
+    CasiopeaFile.close()
+    CazoFile.close()
+    CygnetFile.close()
+    GeminisFile.close()
+    HydraFile.close()
+    OsaMFile.close()
+    OsamFile.close()
+    return[plt.draw()] 
+
+def constellation(f):
     XY = []
     cont = 0
     xy1 = ""
     xy2 = ""
-
-    for line in HydraFile:
+    for line in f:
         field = line.split(",")
         for line2 in nameslist:
             if len(line2) == 1:
@@ -109,14 +129,11 @@ def allStarsAllConstellations():
     xx = []
     yy = []
     cont = 0
-
     for Dots in XY:
-        Dots = Dots.split(";")
-        dots1 = Dots[0].split(",")
-        dots2 = Dots[1].split(",")
-        xx = [float(dots1[0]),float(dots2[0])]
-        yy = [float(dots1[1]),float(dots2[1])]
-        plt.plot(xx, yy, marker = '.')
-    
-    return[plt.draw()] 
+    Dots = Dots.split(";")
+    dots1 = Dots[0].split(",")
+    dots2 = Dots[1].split(",")
+    xx = [float(dots1[0]),float(dots2[0])]
+    yy = [float(dots1[1]),float(dots2[1])]
+    plt.plot(xx, yy, marker = '.')
 
