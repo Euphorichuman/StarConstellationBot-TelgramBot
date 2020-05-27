@@ -27,4 +27,4 @@ estudiantes de ingeniería de sistemas y computación, de la universidad del Nor
 
 ## Licencia 
 
-Este proyecto está bajo la Licencia Apache license 2.0. Mira el archivo LICENSE.MD para más detalles.
+Este proyecto está bajo la Licencia Apache license 2.0. Mira el archivo [LICENSE.MD](https://github.com/fuentesDeveloper/Telegram_Bot_Stars/blob/master/LICENSE.MD) para más detalles.
