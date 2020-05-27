@@ -1,6 +1,6 @@
 # StarConstellationBot (Telegram Bot)
 
-![Logo Bot](./files/StarConstellationBot_Photo.PNG)
+![Logo Bot](https://raw.githubusercontent.com/fuentesDeveloper/Telegram_Bot_Stars/develop/files/StarConstellationBot_Photo.png)
 
 Los astrónomos recopilan muchos datos sobre las estrellas y las constelaciones, y hay muchos catálogos de texto plano que identifican las ubicaciones de las mismas. Por lo anterior, el buscar información sobre estas puede llegar a ser algo muy confuso, por esa razón se implementó este bot, para que a los usuarios finales se les haga fácil y entretenido la búsqueda y visualización de esta información.
 
