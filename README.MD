@@ -9,7 +9,7 @@ Los astrónomos recopilan muchos datos sobre las estrellas y las constelaciones,
 - El bot puede mostrar un gráfico con todas las estrellas y, adicionalmente, una constelación en particular, escogida por el usuario.
 - El bot puede mostrar un gráfico de todas las estrellas y todas las constelaciones.
 
-### Conselaciones disponibles
+### Constelaciones disponibles
 - Boyero
 - Casiopea
 - Cazo
